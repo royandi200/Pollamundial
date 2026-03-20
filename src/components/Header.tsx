@@ -37,7 +37,7 @@ export function Header({ vistaActual, onCambiarVista, usuarioActual, onLogout }:
           {/* Logo */}
           <div className="flex items-center gap-3">
             <img
-              src="/sonda-logo.png"
+              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/imagen-KdoI3pxL9NDcumBpHL3k7nErcSX02G.png"
               alt="SONDA - make it easy"
               className="h-10 w-auto"
             />
