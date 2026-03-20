@@ -1,0 +1,243 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Colores SONDA - Branding Corporativo */
+    --sonda-blue: 223 100% 31%;
+    --sonda-blue-light: 223 60% 50%;
+    --sonda-blue-dark: 223 100% 20%;
+    
+    /* Colores Mundial 2026 */
+    --mexico-green: 158 100% 20%;
+    --mexico-red: 350 85% 43%;
+    --gold: 51 100% 50%;
+    
+    /* Colores base */
+    --background: 0 0% 96%;
+    --foreground: 0 0% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 10%;
+    --primary: 223 100% 31%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 51 100% 50%;
+    --accent-foreground: 0 0% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 223 100% 31%;
+    --radius: 0.625rem;
+    
+    /* Colores de estado */
+    --success: 142 76% 36%;
+    --warning: 38 92% 50%;
+    --error: 0 84% 60%;
+    
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 223 100% 31%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 223 100% 31%;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 223 100% 50%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 51 100% 50%;
+    --accent-foreground: 0 0% 10%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 223 100% 50%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 223 100% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 223 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+}
+
+@layer components {
+  /* Logo SONDA */
+  .sonda-logo {
+    font-family: 'Montserrat', 'Poppins', sans-serif;
+    font-weight: 700;
+    color: #0033A0;
+    letter-spacing: 0.05em;
+  }
+
+  /* Gradient SONDA */
+  .sonda-gradient {
+    background: linear-gradient(135deg, #0033A0 0%, #3366CC 100%);
+  }
+
+  /* Botón primario SONDA */
+  .sonda-btn-primary {
+    background-color: #0033A0;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+
+  .sonda-btn-primary:hover {
+    background-color: #001F66;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 51, 160, 0.3);
+  }
+
+  /* Header principal */
+  .main-header {
+    background: linear-gradient(135deg, #0033A0 0%, #3366CC 100%);
+    color: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+
+  /* Footer */
+  .main-footer {
+    background-color: #001F66;
+    color: white;
+    padding: 2rem;
+  }
+
+  /* Tarjetas SONDA */
+  .sonda-card {
+    background: white;
+    border-radius: 0.75rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    border: 1px solid #e5e7eb;
+    transition: all 0.3s ease;
+  }
+
+  .sonda-card:hover {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  }
+
+  /* Progress bar personalizada */
+  .progress-sonda {
+    background-color: #e5e7eb;
+    border-radius: 9999px;
+    overflow: hidden;
+  }
+
+  .progress-sonda > div {
+    background: linear-gradient(90deg, #0033A0 0%, #3366CC 100%);
+    transition: width 0.5s ease;
+  }
+
+  /* Badges especiales */
+  .badge-lider {
+    background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+    color: #1a1a1a;
+    font-weight: 600;
+  }
+
+  /* Animaciones */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.3s ease-out;
+  }
+
+  @keyframes pulse-sonda {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(0, 51, 160, 0.4); }
+    50% { box-shadow: 0 0 0 8px rgba(0, 51, 160, 0); }
+  }
+
+  .animate-pulse-sonda {
+    animation: pulse-sonda 2s infinite;
+  }
+
+  /* Scrollbar personalizada */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #0033A0;
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #001F66;
+  }
+}
+
+@layer utilities {
+  /* Utilidades de texto */
+  .text-sonda-blue {
+    color: #0033A0;
+  }
+
+  .text-sonda-blue-light {
+    color: #3366CC;
+  }
+
+  .text-sonda-blue-dark {
+    color: #001F66;
+  }
+
+  /* Fondos */
+  .bg-sonda-blue {
+    background-color: #0033A0;
+  }
+
+  .bg-sonda-blue-light {
+    background-color: #3366CC;
+  }
+
+  .bg-sonda-blue-dark {
+    background-color: #001F66;
+  }
+
+  /* Bordes */
+  .border-sonda-blue {
+    border-color: #0033A0;
+  }
+}
