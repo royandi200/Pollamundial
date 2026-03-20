@@ -36,13 +36,15 @@ export function Header({ vistaActual, onCambiarVista, usuarioActual, onLogout }:
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center gap-3">
-            <div className="flex flex-col">
-              <span className="sonda-logo text-white text-2xl">SONDA</span>
-              <span className="text-xs text-white/80 flex items-center gap-1">
-                <Trophy className="w-3 h-3" />
-                Polla Mundial 2026
-              </span>
-            </div>
+            <img
+              src="/sonda-logo.png"
+              alt="SONDA - make it easy"
+              className="h-10 w-auto"
+            />
+            <span className="text-xs text-[#0033A0]/70 flex items-center gap-1 font-medium">
+              <Trophy className="w-3 h-3" />
+              Polla Mundial 2026
+            </span>
           </div>
 
           {/* Navegación Desktop */}
@@ -56,8 +58,8 @@ export function Header({ vistaActual, onCambiarVista, usuarioActual, onLogout }:
                   onClick={() => onCambiarVista(item.vista)}
                   className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all duration-200 ${
                     isActive
-                      ? 'bg-white text-[#0033A0] font-semibold'
-                      : 'text-white/90 hover:bg-white/20 hover:text-white'
+                      ? 'bg-[#0033A0] text-white font-semibold'
+                      : 'text-[#0033A0]/80 hover:bg-[#0033A0]/10 hover:text-[#0033A0]'
                   }`}
                 >
                   <Icon className="w-4 h-4" />
@@ -70,7 +72,7 @@ export function Header({ vistaActual, onCambiarVista, usuarioActual, onLogout }:
           {/* Usuario y Logout */}
           <div className="hidden md:flex items-center gap-4">
             {usuarioActual && (
-              <div className="flex items-center gap-2 text-white">
+              <div className="flex items-center gap-2 text-[#0033A0]">
                 <span className="text-2xl">{usuarioActual.avatar}</span>
                 <div className="flex flex-col">
                   <span className="text-sm font-medium">{usuarioActual.nombre}</span>
@@ -81,7 +83,7 @@ export function Header({ vistaActual, onCambiarVista, usuarioActual, onLogout }:
                         ADMIN
                       </span>
                     )}
-                    <span className="text-xs text-white/70">{usuarioActual.puntosTotales} pts</span>
+                    <span className="text-xs text-[#0033A0]/60">{usuarioActual.puntosTotales} pts</span>
                   </div>
                 </div>
               </div>
@@ -90,7 +92,7 @@ export function Header({ vistaActual, onCambiarVista, usuarioActual, onLogout }:
               variant="ghost"
               size="sm"
               onClick={onLogout}
-              className="text-white hover:bg-white/20"
+              className="text-[#0033A0] hover:bg-[#0033A0]/10"
             >
               <LogOut className="w-4 h-4 mr-2" />
               Salir
@@ -99,7 +101,7 @@ export function Header({ vistaActual, onCambiarVista, usuarioActual, onLogout }:
 
           {/* Botón Menú Mobile */}
           <button
-            className="md:hidden text-white p-2"
+            className="md:hidden text-[#0033A0] p-2"
             onClick={() => setMenuMobileOpen(!menuMobileOpen)}
           >
             {menuMobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -109,7 +111,7 @@ export function Header({ vistaActual, onCambiarVista, usuarioActual, onLogout }:
 
       {/* Menú Mobile */}
       {menuMobileOpen && (
-        <div className="md:hidden bg-[#001F66] border-t border-white/20">
+        <div className="md:hidden bg-white border-t border-gray-200">
           <div className="px-4 py-3 space-y-2">
             {menuItems.map((item) => {
               const Icon = item.icon;
@@ -123,8 +125,8 @@ export function Header({ vistaActual, onCambiarVista, usuarioActual, onLogout }:
                   }}
                   className={`flex items-center gap-3 w-full px-4 py-3 rounded-lg transition-all ${
                     isActive
-                      ? 'bg-white text-[#0033A0] font-semibold'
-                      : 'text-white hover:bg-white/20'
+                      ? 'bg-[#0033A0] text-white font-semibold'
+                      : 'text-[#0033A0] hover:bg-[#0033A0]/10'
                   }`}
                 >
                   <Icon className="w-5 h-5" />
@@ -135,12 +137,12 @@ export function Header({ vistaActual, onCambiarVista, usuarioActual, onLogout }:
             
             {/* Usuario Mobile */}
             {usuarioActual && (
-              <div className="border-t border-white/20 pt-3 mt-3">
-                <div className="flex items-center gap-3 px-4 py-2 text-white">
+              <div className="border-t border-gray-200 pt-3 mt-3">
+                <div className="flex items-center gap-3 px-4 py-2 text-[#0033A0]">
                   <span className="text-3xl">{usuarioActual.avatar}</span>
                   <div>
                     <p className="font-medium">{usuarioActual.nombre}</p>
-                    <p className="text-sm text-white/70">{usuarioActual.puntosTotales} puntos</p>
+                    <p className="text-sm text-[#0033A0]/60">{usuarioActual.puntosTotales} puntos</p>
                     {usuarioActual.esAdmin && (
                       <span className="text-xs bg-yellow-400 text-[#0033A0] px-1.5 py-0.5 rounded font-semibold mt-1 inline-flex items-center gap-1">
                         <Shield className="w-3 h-3" />
@@ -151,7 +153,7 @@ export function Header({ vistaActual, onCambiarVista, usuarioActual, onLogout }:
                 </div>
                 <button
                   onClick={onLogout}
-                  className="flex items-center gap-3 w-full px-4 py-3 text-white hover:bg-white/20 rounded-lg mt-2"
+                  className="flex items-center gap-3 w-full px-4 py-3 text-[#0033A0] hover:bg-[#0033A0]/10 rounded-lg mt-2"
                 >
                   <LogOut className="w-5 h-5" />
                   Cerrar sesión
