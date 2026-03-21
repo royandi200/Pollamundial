@@ -360,7 +360,7 @@ function App() {
       <div className="min-h-screen flex items-center justify-center sonda-gradient">
         <div className="text-center text-white">
           <img
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/imagen-KdoI3pxL9NDcumBpHL3k7nErcSX02G.png"
+            src="/sonda-logo.png"
             alt="SONDA - make it easy"
             style={{ height: '60px', width: 'auto', margin: '0 auto 1rem', filter: 'brightness(0) invert(1)' }}
           />
