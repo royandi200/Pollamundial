@@ -359,7 +359,11 @@ function App() {
     return (
       <div className="min-h-screen flex items-center justify-center sonda-gradient">
         <div className="text-center text-white">
-          <div className="sonda-logo text-4xl mb-4">SONDA</div>
+          <img
+            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/imagen-KdoI3pxL9NDcumBpHL3k7nErcSX02G.png"
+            alt="SONDA - make it easy"
+            style={{ height: '60px', width: 'auto', margin: '0 auto 1rem', filter: 'brightness(0) invert(1)' }}
+          />
           <div className="animate-spin w-8 h-8 border-4 border-white border-t-transparent rounded-full mx-auto"></div>
           <p className="mt-4">Cargando...</p>
         </div>
@@ -382,7 +386,7 @@ function App() {
   }
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#F5F5F5]">
+    <div className="min-h-screen flex flex-col" style={{ backgroundColor: '#F5F5F5' }}>
       <Header
         vistaActual={vistaActual}
         onCambiarVista={setVistaActual}
