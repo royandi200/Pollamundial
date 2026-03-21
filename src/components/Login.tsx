@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import sondaLogo from '../../public/sonda-logo.png';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -72,11 +71,7 @@ export function Login({ apostadores, onLogin, onLoginAdmin, onRegistrar }: Login
       <div className="w-full max-w-md">
         {/* Logo SONDA */}
         <div className="text-center mb-8">
-          <img
-            src={sondaLogo}
-            alt="SONDA - make it easy"
-            style={{ height: '60px', width: 'auto', margin: '0 auto 1rem', filter: 'brightness(0) invert(1)' }}
-          />
+          <h1 className="sonda-logo text-6xl mb-2">SONDA</h1>
           <div className="flex items-center justify-center gap-2 mb-2">
             <Trophy className="w-8 h-8 text-yellow-400" />
             <span className="text-2xl font-bold text-white">Polla Mundial 2026</span>
@@ -232,11 +227,7 @@ export function Login({ apostadores, onLogin, onLoginAdmin, onRegistrar }: Login
 
         {/* Footer */}
         <div className="text-center mt-8 text-white/60 text-sm">
-          <img
-            src={sondaLogo}
-            alt="SONDA"
-            style={{ height: '24px', width: 'auto', margin: '0 auto 0.25rem', filter: 'brightness(0) invert(1)', opacity: 0.6 }}
-          />
+          <p className="sonda-logo text-lg mb-1">SONDA</p>
           <p>Mundial 2026 - México · Estados Unidos · Canadá</p>
         </div>
       </div>
