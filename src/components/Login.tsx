@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import sondaLogo from '../../public/sonda-logo.png';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -72,7 +73,7 @@ export function Login({ apostadores, onLogin, onLoginAdmin, onRegistrar }: Login
         {/* Logo SONDA */}
         <div className="text-center mb-8">
           <img
-            src="/sonda-logo.png"
+            src={sondaLogo}
             alt="SONDA - make it easy"
             style={{ height: '60px', width: 'auto', margin: '0 auto 1rem', filter: 'brightness(0) invert(1)' }}
           />
@@ -232,7 +233,7 @@ export function Login({ apostadores, onLogin, onLoginAdmin, onRegistrar }: Login
         {/* Footer */}
         <div className="text-center mt-8 text-white/60 text-sm">
           <img
-            src="/sonda-logo.png"
+            src={sondaLogo}
             alt="SONDA"
             style={{ height: '24px', width: 'auto', margin: '0 auto 0.25rem', filter: 'brightness(0) invert(1)', opacity: 0.6 }}
           />

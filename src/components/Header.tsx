@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import sondaLogo from '../../public/sonda-logo.png';
 import type { Vista, Apostador } from '@/types';
 import { Button } from '@/components/ui/button';
 import {
@@ -47,7 +48,7 @@ export function Header({ vistaActual, onCambiarVista, usuarioActual, onLogout }:
           {/* Logo SONDA */}
           <div className="flex items-center gap-3">
             <img
-              src="/sonda-logo.png"
+              src={sondaLogo}
               alt="SONDA - make it easy"
               style={{ height: '44px', width: 'auto', display: 'block' }}
             />
